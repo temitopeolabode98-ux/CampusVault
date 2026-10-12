@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Student dashboard for CampusVault."
+    >
+
+    <title>Student Dashboard | CampusVault</title>
+
+    <link
+        rel="stylesheet"
+        href="../../css/style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../../css/responsive.css"
+    >
+
+    <link
+       rel="stylesheet"
+       href="../../css/pages/dashboard.css"
+    >
+    <script src="../../js/theme.js" defer></script>
+
+</head>
+
+
+<body>
+
+    <!-- =========================
+         HEADER
+    ========================== -->
+
+    <header class="site-header">
+
+        <div class="container header-container">
+
+            <a
+                href="../../index.html"
+                class="logo"
+                aria-label="CampusVault Home"
+            >
+
+                <span class="logo-icon">
+                    CV
+                </span>
+
+                <span class="logo-text">
+                    CampusVault
+                </span>
+
+            </a>
+
+
+            <nav
+                class="desktop-navigation"
+                aria-label="Main navigation"
+            >
+
+                <a href="../../index.html">
+                    Home
+                </a>
+
+                <a href="../courses.html">
+                    Courses
+                </a>
+
+                <a href="../resources.html">
+                    Resources
+                </a>
+
+                <a href="../past-questions.html">
+                    Past Questions
+                </a>
+
+            </nav>
+
+
+            <div class="header-actions">
+
+                <a
+                    href="profile.html"
+                    class="btn btn-secondary btn-small"
+                >
+                    Profile
+                </a>
+
+                <a
+                    href="../../index.html"
+                    class="btn btn-primary btn-small"
+                >
+                    Logout
+                </a>
+
+            </div>
+
+            <button
+                class="theme-toggle"
+                type="button"
+                aria-label="Switch to dark mode"
+                aria-pressed="false"
+            >
+                <span class="theme-toggle-icon" aria-hidden="true">☾</span>
+                <span class="theme-toggle-label">Dark mode</span>
+            </button>
+
+
+            <button
+                type="button"
+                class="mobile-menu-toggle"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+                aria-controls="mobile-navigation"
+            >
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </button>
+
+        </div>
+
+
+        <div
+            class="mobile-navigation"
+            id="mobile-navigation"
+        >
+
+            <a href="../../index.html">
+                Home
+            </a>
+
+            <a href="../courses.html">
+                Courses
+            </a>
+
+            <a href="../resources.html">
+                Resources
+            </a>
+
+            <a href="../past-questions.html">
+                Past Questions
+            </a>
+
+            <a href="profile.html">
+                Profile
+            </a>
+
+            <a href="../../index.html">
+                Logout
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <!-- =========================
+             DASHBOARD WELCOME
+        ========================== -->
+
+        <section class="dashboard-welcome">
+
+            <div class="container">
+
+                <span class="section-label">
+                    Student Dashboard
+                </span>
+
+                <h1 id="dashboard-welcome-name">
+                    Welcome back, Student
+                </h1>
+
+                <p>
+                    Find your course materials, continue
+                    studying, and manage your saved resources.
+                </p>
+
+            </div>
+
+            <div class="dashboard-stats-grid">
+
+    <article class="dashboard-stat-card">
+        <span class="dashboard-stat-label">
+            Available Resources
+        </span>
+
+        <h2 id="stat-available-resources">0</h2>
+
+        <p>Resources available for your studies</p>
+    </article>
+
+    <article class="dashboard-stat-card">
+        <span class="dashboard-stat-label">
+            Saved Resources
+        </span>
+
+        <h2 id="stat-saved-resources">0</h2>
+
+        <p>Your bookmarked study materials</p>
+    </article>
+
+    <article class="dashboard-stat-card">
+        <span class="dashboard-stat-label">
+            Recently Viewed
+        </span>
+
+        <h2 id="stat-recent-resources">0</h2>
+
+        <p>Your recently opened resources</p>
+    </article>
+
+</div>
+
+        </section>
+
+
+        <!-- =========================
+             QUICK ACTIONS
+        ========================== -->
+
+        <section class="dashboard-section">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span class="section-label">
+                        Quick Access
+                    </span>
+
+                    <h2>
+                        What would you like to do?
+                    </h2>
+
+                </div>
+
+
+                <div class="dashboard-actions">
+
+                    <a
+                        href="../resources.html"
+                        class="dashboard-action-card"
+                    >
+
+                        <div class="dashboard-action-icon">
+                            R
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Browse Resources
+                            </h3>
+
+                            <p>
+                                Find lecture notes, past questions,
+                                assignments, and other materials.
+                            </p>
+
+                        </div>
+
+                    </a>
+
+
+                    <a
+                        href="saved-resources.html"
+                        class="dashboard-action-card"
+                    >
+
+                        <div class="dashboard-action-icon">
+                            S
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Saved Resources
+                            </h3>
+
+                            <p>
+                                Quickly access resources you have
+                                saved for later.
+                            </p>
+
+                        </div>
+
+                    </a>
+
+
+                    <a
+                        href="recently-viewed.html"
+                        class="dashboard-action-card"
+                    >
+
+                        <div class="dashboard-action-icon">
+                            H
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Recently Viewed
+                            </h3>
+
+                            <p>
+                                Return to resources you recently
+                                accessed.
+                            </p>
+
+                        </div>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="dashboard-section">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span class="section-label">
+                Your Activity
+            </span>
+
+            <h2>
+                Continue Learning
+            </h2>
+
+            <p>
+                Quickly return to resources you recently viewed.
+            </p>
+
+        </div>
+
+
+        <div
+            class="dashboard-recent-resources"
+            id="dashboard-recent-resources"
+        >
+
+            <!-- Recently viewed resources
+                 will be inserted here -->
+
+        </div>
+
+
+        <div
+            class="dashboard-empty"
+            id="dashboard-recent-empty"
+            hidden
+        >
+
+            <h3>
+                No Recent Resources
+            </h3>
+
+            <p>
+                Open a resource to see it here and quickly
+                continue your studies.
+            </p>
+
+            <a
+                href="../resources.html"
+                class="btn btn-primary"
+            >
+                Browse Resources
+            </a>
+
+        </div>
+
+
+        <div class="dashboard-view-all">
+
+            <a
+                href="recently-viewed.html"
+                class="btn btn-secondary"
+            >
+                View All Recently Viewed
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer class="site-footer">
+
+        <div class="container">
+
+            <div class="footer-content">
+
+                <div class="footer-brand">
+
+                    <a
+                        href="../../index.html"
+                        class="logo"
+                    >
+
+                        <span class="logo-icon">
+                            CV
+                        </span>
+
+                        <span class="logo-text">
+                            CampusVault
+                        </span>
+
+                    </a>
+
+                    <p>
+                        A digital academic library designed
+                        to make learning resources easier to
+                        discover and access.
+                    </p>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h3>
+                        Platform
+                    </h3>
+
+                    <a href="../courses.html">
+                        Courses
+                    </a>
+
+                    <a href="../resources.html">
+                        Resources
+                    </a>
+
+                    <a href="../past-questions.html">
+                        Past Questions
+                    </a>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h3>
+                        Student
+                    </h3>
+
+                    <a href="saved-resources.html">
+                        Saved Resources
+                    </a>
+
+                    <a href="recently-viewed.html">
+                        Recently Viewed
+                    </a>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h3>
+                        CampusVault
+                    </h3>
+
+                    <a href="../about.html">
+                        About
+                    </a>
+
+                    <a href="../contact.html">
+                        Contact
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                <p>
+                    &copy; 2026 CampusVault.
+                    All rights reserved.
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <script src="../../js/navigation.js"></script>
+    <script src="../../js/dashboard.js"></script>
+    <script src="../../js/dashboard-stats.js"></script>
+</body>
+
+</html>

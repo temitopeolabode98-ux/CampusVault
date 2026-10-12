@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Settings | CampusVault</title>
+
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
+    <link rel="stylesheet" href="../../css/pages/dashboard.css">
+    <link rel="stylesheet" href="../../css/pages/settings.css">
+    <script src="../../js/theme.js" defer></script>
+    <script src="../../js/settings.js" defer></script>
+</head>
+
+<body>
+
+    <!-- =========================
+         HEADER
+    ========================== -->
+
+    <header class="site-header">
+
+        <div class="container header-container">
+
+            <a href="../../index.html" class="site-logo">
+                <span class="logo-icon">CV</span>
+                <span class="logo-text">CampusVault</span>
+            </a>
+
+            <nav class="desktop-navigation">
+                <a href="../../index.html">Home</a>
+                <a href="../resources.html">Resources</a>
+                <a href="../courses.html">Courses</a>
+                <a href="../past-questions.html">Past Questions</a>
+            </nav>
+
+            <div class="header-actions">
+                <a href="dashboard.html" class="btn btn-secondary">
+                    Dashboard
+                </a>
+            </div>
+
+            <button
+                class="theme-toggle"
+                type="button"
+                aria-label="Switch to dark mode"
+                aria-pressed="false"
+            >
+                <span class="theme-toggle-icon" aria-hidden="true">☾</span>
+                <span class="theme-toggle-label">Dark mode</span>
+            </button>
+
+            <button
+                type="button"
+                class="mobile-menu-toggle"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+                aria-controls="mobile-navigation"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+        </div>
+
+        <nav
+            class="mobile-navigation"
+            id="mobile-navigation"
+            aria-label="Mobile navigation"
+        >
+            <a href="../../index.html">Home</a>
+            <a href="../resources.html">Resources</a>
+            <a href="../courses.html">Courses</a>
+            <a href="../past-questions.html">Past Questions</a>
+            <a href="dashboard.html">Dashboard</a>
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <!-- =========================
+             PAGE INTRODUCTION
+        ========================== -->
+
+        <section class="dashboard-welcome">
+
+            <div class="container">
+
+                <span class="section-label">
+                    Student Account
+                </span>
+
+                <h1>Settings</h1>
+
+                <p>
+                    Customize your CampusVault experience and manage
+                    your study preferences.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             SETTINGS CONTENT
+        ========================== -->
+
+        <section class="settings-section">
+
+            <div class="container">
+
+                <!-- Account Preferences -->
+
+                <article class="settings-card">
+
+                    <div class="settings-card-heading">
+
+                        <div class="settings-icon" aria-hidden="true">
+                            A
+                        </div>
+
+                        <div>
+                            <h2>Account Preferences</h2>
+
+                            <p>
+                                Manage your basic account preferences.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div class="settings-item">
+
+                        <div class="settings-item-info">
+                            <h3>Email Notifications</h3>
+
+                            <p>
+                                Receive updates about new academic
+                                resources and important announcements.
+                            </p>
+                        </div>
+
+                        <label class="settings-toggle">
+
+                            <input
+                                type="checkbox"
+                                id="email-notifications"
+                            >
+
+                            <span class="toggle-slider"></span>
+
+                            <span class="sr-only">
+                                Enable email notifications
+                            </span>
+
+                        </label>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Display Preferences -->
+
+                <article class="settings-card">
+
+                    <div class="settings-card-heading">
+
+                        <div class="settings-icon" aria-hidden="true">
+                            D
+                        </div>
+
+                        <div>
+                            <h2>Display Preferences</h2>
+
+                            <p>
+                                Choose how CampusVault looks on your device.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div class="settings-item">
+
+                        <div class="settings-item-info">
+                            <h3>Dark Mode</h3>
+
+                            <p>
+                                Use a darker appearance for the website.
+                            </p>
+                        </div>
+
+                        <label class="settings-toggle">
+
+                            <input
+                                type="checkbox"
+                                id="dark-mode"
+                            >
+
+                            <span class="toggle-slider"></span>
+
+                            <span class="sr-only">
+                                Enable dark mode
+                            </span>
+
+                        </label>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Resource Preferences -->
+
+                <article class="settings-card">
+
+                    <div class="settings-card-heading">
+
+                        <div class="settings-icon" aria-hidden="true">
+                            R
+                        </div>
+
+                        <div>
+                            <h2>Resource Preferences</h2>
+
+                            <p>
+                                Choose your preferred academic resource type.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div class="settings-item settings-select-item">
+
+                        <div class="settings-item-info">
+                            <h3>Default Resource Type</h3>
+
+                            <p>
+                                Select the resource category you usually
+                                want to explore first.
+                            </p>
+                        </div>
+
+                        <div class="settings-select-wrapper">
+
+                            <label for="default-resource-type">
+                                Preferred resource
+                            </label>
+
+                            <select id="default-resource-type">
+
+                                <option value="all">
+                                    All Resources
+                                </option>
+
+                                <option value="lecture-notes">
+                                    Lecture Notes
+                                </option>
+
+                                <option value="past-questions">
+                                    Past Questions
+                                </option>
+
+                                <option value="assignments">
+                                    Assignments
+                                </option>
+
+                                <option value="other">
+                                    Other Resources
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Privacy Preferences -->
+
+                <article class="settings-card">
+
+                    <div class="settings-card-heading">
+
+                        <div class="settings-icon" aria-hidden="true">
+                            P
+                        </div>
+
+                        <div>
+                            <h2>Privacy</h2>
+
+                            <p>
+                                Manage your locally stored browsing activity.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div class="settings-item">
+
+                        <div class="settings-item-info">
+                            <h3>Recently Viewed Resources</h3>
+
+                            <p>
+                                Clear your list of recently viewed resources.
+                                This will not remove saved resources.
+                            </p>
+                        </div>
+
+                        <button
+                            type="button"
+                            class="btn btn-secondary"
+                            id="clear-history-button"
+                        >
+                            Clear History
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Settings Actions -->
+
+                <div class="settings-actions">
+
+                    <p
+                        id="settings-message"
+                        class="settings-message"
+                        role="status"
+                        aria-live="polite"
+                    ></p>
+
+                    <button
+                        type="button"
+                        class="btn btn-secondary"
+                        id="reset-settings-button"
+                    >
+                        Reset Settings
+                    </button>
+
+                    <button
+                        type="button"
+                        class="btn btn-primary"
+                        id="save-settings-button"
+                    >
+                        Save Settings
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer class="site-footer">
+
+        <div class="container footer-bottom">
+
+            <p>
+                &copy; 2026 CampusVault. All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script src="../../js/navigation.js"></script>
+
+</body>
+
+</html>

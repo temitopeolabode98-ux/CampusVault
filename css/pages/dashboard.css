@@ -1,0 +1,452 @@
+ /* =========================
+   STUDENT DASHBOARD
+========================= */
+
+/*
+/* =========================
+   WELCOME SECTION
+========================= */
+
+.dashboard-welcome {
+    padding: 64px 0;
+    background-color: var(--color-primary-light);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.dashboard-welcome h1 {
+    margin: 12px 0 16px;
+    color: var(--color-heading);
+}
+
+.dashboard-welcome p {
+    max-width: 680px;
+    margin: 0;
+    color: var(--color-text);
+    font-size: 17px;
+}
+
+
+/* =========================
+   DASHBOARD SECTIONS
+========================= */
+
+.dashboard-section {
+    padding: 64px 0;
+}
+
+.dashboard-section + .dashboard-section {
+    padding-top: 0;
+}
+
+
+/* =========================
+   DASHBOARD ACTIONS
+========================= */
+
+.dashboard-actions {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-top: 32px;
+}
+
+.dashboard-action-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 24px;
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    text-decoration: none;
+    box-shadow: var(--shadow-sm);
+    transition:
+        transform var(--transition-fast),
+        box-shadow var(--transition-fast),
+        border-color var(--transition-fast);
+}
+
+.dashboard-action-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--color-primary);
+}
+
+.dashboard-action-card h3 {
+    margin: 0 0 8px;
+    color: var(--color-heading);
+}
+
+.dashboard-action-card p {
+    margin: 0;
+    color: var(--color-text);
+    line-height: 1.6;
+}
+
+
+/* =========================
+   ACTION ICON
+========================= */
+
+.dashboard-action-icon {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: var(--radius-md);
+
+    background-color: var(--color-primary-light);
+    color: var(--color-primary);
+
+    font-size: 18px;
+    font-weight: 700;
+}
+
+
+/* =========================
+   PLACEHOLDER
+========================= */
+
+.dashboard-placeholder {
+    padding: 40px;
+    margin-top: 32px;
+
+    text-align: center;
+
+    background-color: var(--color-surface);
+    border: 1px dashed var(--color-border);
+    border-radius: var(--radius-lg);
+}
+
+.dashboard-placeholder h3 {
+    margin: 0 0 12px;
+    color: var(--color-heading);
+}
+
+.dashboard-placeholder p {
+    max-width: 560px;
+    margin: 0 auto;
+    color: var(--color-text);
+    line-height: 1.6;
+}
+/* =========================
+   RECENTLY VIEWED RESOURCES
+========================= */
+
+.dashboard-recent-resources {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-top: 32px;
+}
+
+.dashboard-resource-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 24px;
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    transition:
+        transform var(--transition-fast),
+        box-shadow var(--transition-fast);
+}
+
+.dashboard-resource-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+}
+
+.dashboard-resource-content {
+    min-width: 0;
+}
+
+.dashboard-resource-content .resource-type-badge {
+    display: inline-block;
+    padding: 6px 10px;
+    margin-bottom: 16px;
+    border-radius: var(--radius-pill);
+    background-color: var(--color-primary-light);
+    color: var(--color-primary-dark);
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.dashboard-resource-content .resource-course {
+    margin: 0 0 8px;
+    color: var(--color-primary);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.dashboard-resource-content h3 {
+    margin: 0 0 16px;
+    color: var(--color-heading);
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+.dashboard-resource-content .resource-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 16px;
+    color: var(--color-text);
+    font-size: 13px;
+}
+
+.dashboard-resource-action {
+    display: flex;
+    align-items: center;
+}
+
+.btn-small {
+    padding: 10px 18px;
+    font-size: 14px;
+}
+
+/* Empty state */
+
+.dashboard-empty {
+    padding: 40px 24px;
+    margin-top: 32px;
+    text-align: center;
+    background-color: var(--color-surface);
+    border: 1px dashed var(--color-border);
+    border-radius: var(--radius-lg);
+}
+
+.dashboard-empty h3 {
+    margin: 0 0 12px;
+    color: var(--color-heading);
+}
+
+.dashboard-empty p {
+    max-width: 520px;
+    margin: 0 auto 24px;
+    color: var(--color-text);
+    line-height: 1.7;
+}
+
+/* View-all button */
+
+.dashboard-view-all {
+    display: flex;
+    justify-content: center;
+    margin-top: 32px;
+}
+
+/* =========================
+   RESPONSIVE DASHBOARD
+========================= */
+
+@media (min-width: 768px) {
+    .dashboard-actions {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .dashboard-recent-resources {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .dashboard-resource-card {
+        align-items: flex-start;
+    }
+}
+
+@media (min-width: 1025px) {
+    .dashboard-recent-resources {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+/* =========================
+   DASHBOARD STATISTICS
+========================= */
+
+.dashboard-stats-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.dashboard-stat-card {
+    padding: 24px;
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+}
+
+.dashboard-stat-label {
+    color: var(--color-text);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.dashboard-stat-card h2 {
+    margin: 12px 0;
+    color: var(--color-primary);
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.dashboard-stat-card p {
+    margin: 0;
+    color: var(--color-text);
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+@media (min-width: 768px) {
+    .dashboard-stats-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+/* ========================================
+   CAMPUSVAULT — DASHBOARD DARK MODE
+======================================== */
+
+/* Main page */
+body.dark-mode main {
+    background-color: #0F172A;
+    color: #E2E8F0;
+}
+
+/* Welcome section */
+body.dark-mode .dashboard-welcome {
+    background-color: #0F172A;
+    border-color: var(--color-border);
+}
+
+body.dark-mode .dashboard-welcome h1 {
+    color: #F8FAFC;
+}
+
+body.dark-mode .dashboard-welcome p {
+    color: #CBD5E1;
+}
+
+/* Section headings */
+body.dark-mode .dashboard-section h2,
+body.dark-mode .section-heading h2 {
+    color: #F8FAFC;
+}
+
+/* Section labels */
+body.dark-mode .dashboard-section .section-label,
+body.dark-mode .dashboard-welcome .section-label {
+    color: #60A5FA;
+}
+
+/* Quick Access cards */
+body.dark-mode .dashboard-action-card {
+    background-color: #1E293B;
+    color: #E2E8F0;
+    border-color: var(--color-border);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+body.dark-mode .dashboard-action-card:hover {
+    background-color: #273449;
+    border-color: #60A5FA;
+}
+
+body.dark-mode .dashboard-action-card h3 {
+    color: #F8FAFC;
+}
+
+body.dark-mode .dashboard-action-card p {
+    color: #CBD5E1;
+}
+
+/* Quick Access icons */
+body.dark-mode .dashboard-action-icon {
+    background-color: #1D4ED8;
+    color: #FFFFFF;
+}
+
+/* Statistics cards */
+body.dark-mode .dashboard-stat-card {
+    background-color: #1E293B;
+    color: #E2E8F0;
+    border-color: var(--color-border);
+}
+
+body.dark-mode .dashboard-stat-label {
+    color: #CBD5E1;
+}
+
+body.dark-mode .dashboard-stat-card h2 {
+    color: #60A5FA;
+}
+
+body.dark-mode .dashboard-stat-card p {
+    color: #CBD5E1;
+}
+
+/* Recently viewed resource cards */
+body.dark-mode .dashboard-resource-card {
+    background-color: #1E293B;
+    color: #E2E8F0;
+    border-color: var(--color-border);
+}
+
+body.dark-mode .dashboard-resource-content h3 {
+    color: #F8FAFC;
+}
+
+body.dark-mode .dashboard-resource-content .resource-meta {
+    color: #CBD5E1;
+}
+
+/* Empty state */
+body.dark-mode .dashboard-empty,
+body.dark-mode .dashboard-placeholder {
+    background-color: #1E293B;
+    color: #E2E8F0;
+    border-color: var(--color-border);
+}
+
+body.dark-mode .dashboard-empty h3,
+body.dark-mode .dashboard-placeholder h3 {
+    color: #F8FAFC;
+}
+
+body.dark-mode .dashboard-empty p,
+body.dark-mode .dashboard-placeholder p {
+    color: #CBD5E1;
+}
+
+/* View-all button */
+body.dark-mode .dashboard-view-all .btn-secondary {
+    background-color: #1E293B;
+    color: #93C5FD;
+    border-color: var(--color-border);
+}
+
+/* Header brand */
+body.dark-mode .site-header .logo-text {
+    color: #F8FAFC;
+}
+
+/* Footer */
+body.dark-mode .site-footer {
+    background-color: #020617;
+    color: #CBD5E1;
+    border-color: var(--color-border);
+}
+
+body.dark-mode .site-footer h3 {
+    color: #F8FAFC;
+}
+
+body.dark-mode .site-footer p,
+body.dark-mode .site-footer a {
+    color: #CBD5E1;
+}

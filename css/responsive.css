@@ -1,0 +1,310 @@
+/* =========================================================
+   CAMPUSVAULT - RESPONSIVE STYLES
+   ========================================================= */
+
+
+/* =========================================================
+   TABLET — 768px+
+   ========================================================= */
+
+@media (min-width: 768px) {
+
+    /* Container */
+
+    .container {
+        width: min(100% - 48px, var(--container-width));
+    }
+
+
+    /* Typography */
+
+    h1 {
+        font-size: 42px;
+    }
+
+    h2 {
+        font-size: 34px;
+    }
+
+
+    /* Hero */
+
+    .hero-section {
+        padding: 100px 0;
+    }
+
+    .hero-content h1 {
+        font-size: 52px;
+    }
+
+
+    /* Courses */
+
+    .course-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    /* Categories */
+
+    .category-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    /* Steps */
+
+    .steps-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+
+    /* Resources */
+
+    .resource-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    /* Footer */
+
+    .footer-container {
+        grid-template-columns: 2fr 1fr 1fr 1fr;
+    }
+
+}
+
+
+/* =========================================================
+   DESKTOP — 1025px+
+   ========================================================= */
+
+@media (min-width: 1025px) {
+
+    /* Header */
+
+    .main-navigation {
+        display: block;
+        margin-left: auto;
+    }
+
+    .desktop-navigation {
+        display: flex;
+        margin-left: auto;
+    }
+
+    .header-actions {
+        display: flex;
+    }
+
+    .mobile-menu-toggle {
+        display: none;
+    }
+
+
+    /* Typography */
+
+    h1 {
+        font-size: 48px;
+    }
+
+    h2 {
+        font-size: 36px;
+    }
+
+
+    /* Hero */
+
+    .hero-section {
+        padding: 120px 0;
+    }
+
+    .hero-content h1 {
+        font-size: 56px;
+    }
+
+    .hero-description {
+        font-size: 18px;
+    }
+
+
+    /* Courses */
+
+    .course-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+
+    /* Categories */
+
+    .category-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+
+    /* Resources */
+
+    .resource-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+
+    /* CTA */
+
+    .cta-content h2 {
+        font-size: 38px;
+    }
+
+}
+
+
+/* =========================================================
+   LARGE DESKTOP — 1440px+
+   ========================================================= */
+
+@media (min-width: 1440px) {
+
+    .container {
+        width: min(100% - 64px, 1200px);
+    }
+
+    .hero-content h1 {
+        font-size: 60px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE — 375px AND BELOW
+   ========================================================= */
+
+@media (max-width: 375px) {
+
+    .container {
+        width: min(100% - 24px, var(--container-width));
+    }
+
+    .header-container {
+        min-height: 64px;
+    }
+
+    .logo-text {
+        font-size: 17px;
+    }
+
+    .logo-icon {
+        width: 34px;
+        height: 34px;
+    }
+
+
+    /* Hero */
+
+    .hero-section {
+        padding: 64px 0;
+    }
+
+    .hero-content h1 {
+        font-size: 34px;
+    }
+
+    .hero-description {
+        font-size: 15px;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+    }
+
+    .hero-actions .btn {
+        width: 100%;
+    }
+
+
+    /* Search */
+
+    .search-section {
+        margin-top: -20px;
+    }
+
+    .search-box {
+        padding: 20px;
+    }
+
+    .resource-search-form {
+        flex-direction: column;
+    }
+
+    .search-button {
+        width: 100%;
+    }
+
+
+    /* Section headings */
+
+    .section-heading {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .section-heading.centered {
+        text-align: left;
+    }
+
+
+    /* Resource cards */
+
+    .resource-card-footer {
+        align-items: stretch;
+    }
+
+    .resource-card-footer .btn {
+        flex: 1;
+    }
+
+
+    /* CTA */
+
+    .cta-content h2 {
+        font-size: 28px;
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL DEVICES — 320px
+   ========================================================= */
+
+@media (max-width: 320px) {
+
+    .container {
+        width: min(100% - 20px, var(--container-width));
+    }
+
+    .logo-text {
+        font-size: 16px;
+    }
+
+    .hero-content h1 {
+        font-size: 30px;
+    }
+
+    .hero-badge {
+        font-size: 11px;
+    }
+
+    .search-box {
+        padding: 16px;
+    }
+
+    .course-card {
+        padding: 16px;
+    }
+
+    .category-card {
+        padding: 20px;
+    }
+
+}

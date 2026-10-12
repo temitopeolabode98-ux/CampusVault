@@ -1,0 +1,1099 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="CampusVault is a digital academic library for students and lecturers to access course notes, past questions, assignments, and other educational resources."
+    >
+
+    <title>CampusVault | Your Digital Academic Library</title>
+
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Responsive stylesheet -->
+    <link rel="stylesheet" href="css/responsive.css">
+    <script src="js/theme.js" defer></script>
+</head>
+
+<body>
+
+    <!-- =========================
+         HEADER
+    ========================== -->
+    <header class="site-header">
+
+        <div class="container header-container">
+
+            <!-- Logo -->
+            <a href="index.html" class="logo" aria-label="CampusVault Home">
+                <span class="logo-icon">CV</span>
+                <span class="logo-text">CampusVault</span>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="main-navigation" aria-label="Main navigation">
+
+                <ul class="nav-list">
+                    <li>
+                        <a href="index.html" class="nav-link active">Home</a>
+                    </li>
+
+                    <li>
+                        <a href="pages/courses.html" class="nav-link">Courses</a>
+                    </li>
+
+                    <li>
+                        <a href="pages/resources.html" class="nav-link">Resources</a>
+                    </li>
+
+                    <li>
+                        <a href="pages/past-questions.html" class="nav-link">
+                            Past Questions
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="pages/about.html" class="nav-link">About</a>
+                    </li>
+
+                    <li>
+                        <a href="pages/contact.html" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+
+            </nav>
+
+            <!-- Authentication Actions -->
+            <div class="header-actions">
+
+                <a href="pages/auth/login.html" class="btn btn-secondary">
+                    Login
+                </a>
+
+                <a href="pages/auth/register.html" class="btn btn-primary">
+                    Register
+                </a>
+
+            </div>
+
+            <button
+                class="theme-toggle"
+                type="button"
+                aria-label="Switch to dark mode"
+                aria-pressed="false"
+            >
+                <span class="theme-toggle-icon" aria-hidden="true">☾</span>
+                <span class="theme-toggle-label">Dark mode</span>
+            </button>
+
+            <!-- Mobile Menu Button -->
+            <button
+                class="mobile-menu-toggle"
+                type="button"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+                aria-controls="mobile-navigation"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+        </div>
+
+        <!-- Mobile Navigation -->
+        <nav
+            id="mobile-navigation"
+            class="mobile-navigation"
+            aria-label="Mobile navigation"
+        >
+
+            <ul class="mobile-nav-list">
+
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+
+                <li>
+                    <a href="pages/courses.html">Courses</a>
+                </li>
+
+                <li>
+                    <a href="pages/resources.html">Resources</a>
+                </li>
+
+                <li>
+                    <a href="pages/past-questions.html">Past Questions</a>
+                </li>
+
+                <li>
+                    <a href="pages/about.html">About</a>
+                </li>
+
+                <li>
+                    <a href="pages/contact.html">Contact</a>
+                </li>
+
+                <li>
+                    <a href="pages/auth/login.html">Login</a>
+                </li>
+
+                <li>
+                    <a href="pages/auth/register.html">Register</a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <!-- =========================
+             HERO SECTION
+        ========================== -->
+        <section class="hero-section">
+
+            <div class="container hero-container">
+
+                <div class="hero-content">
+
+                    <span class="hero-badge">
+                        Your Digital Academic Library
+                    </span>
+
+                    <h1>
+                        Find the academic resources
+                        you need to succeed.
+                    </h1>
+
+                    <p class="hero-description">
+                        Access course notes, past questions, assignments,
+                        and other academic resources in one organized
+                        platform.
+                    </p>
+
+                    <div class="hero-actions">
+
+                        <a
+                            href="pages/resources.html"
+                            class="btn btn-primary btn-large"
+                        >
+                            Explore Resources
+                        </a>
+
+                        <a
+                            href="pages/courses.html"
+                            class="btn btn-secondary btn-large"
+                        >
+                            Browse Courses
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             SEARCH SECTION
+        ========================== -->
+        <section class="search-section">
+
+            <div class="container">
+
+                <div class="search-box">
+
+                    <div class="section-heading search-heading">
+
+                        <span class="section-label">
+                            FIND WHAT YOU NEED
+                        </span>
+
+                        <h2>
+                            Search CampusVault
+                        </h2>
+
+                        <p>
+                            Search for courses, lecture notes,
+                            past questions, and other resources.
+                        </p>
+
+                    </div>
+
+                    <form
+                        class="resource-search-form"
+                        id="resource-search-form"
+
+                    >
+
+                        <div class="search-input-wrapper">
+
+                            <label
+                                for="resource-search"
+                                class="visually-hidden"
+                            >
+                                Search academic resources
+                            </label>
+
+                            <input
+                                type="search"
+                                id="resource-search"
+                                name="search"
+                                class="search-input"
+                                placeholder="Search course code, course title, or resource..."
+                                autocomplete="off"
+                            >
+
+                        </div>
+
+                        <button
+                            type="submit"
+                            class="btn btn-primary search-button"
+                        >
+                            Search
+                        </button>
+
+                        <p
+                           class="search-message"
+                           id="search-message"
+                           aria-live="polite"
+                        ></p>
+                    </form>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             POPULAR COURSES
+        ========================== -->
+        <section class="courses-section">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <div>
+                        <span class="section-label">
+                            EXPLORE
+                        </span>
+
+                        <h2>
+                            Popular Courses
+                        </h2>
+                    </div>
+
+                    <a
+                        href="pages/courses.html"
+                        class="text-link"
+                    >
+                        View All Courses
+                    </a>
+
+                </div>
+
+
+                <div class="course-grid">
+
+                    <!-- Course Card -->
+                    <article class="course-card">
+
+                        <div class="course-icon">
+                            CS
+                        </div>
+
+                        <div class="course-content">
+
+                            <span class="course-code">
+                                CSC 301
+                            </span>
+
+                            <h3>
+                                Data Structures
+                            </h3>
+
+                            <p>
+                                Computer Science
+                            </p>
+
+                        </div>
+
+                        <a
+                            href="pages/resources.html?search=CSC%20301"
+                            class="course-link"
+                            aria-label="View CSC 301 resources"
+                        >
+                            →
+                        </a>
+
+                    </article>
+
+
+                    <!-- Course Card -->
+                    <article class="course-card">
+
+                        <div class="course-icon">
+                            CS
+                        </div>
+
+                        <div class="course-content">
+
+                            <span class="course-code">
+                                CSC 305
+                            </span>
+
+                            <h3>
+                                Database Systems
+                            </h3>
+
+                            <p>
+                                Computer Science
+                            </p>
+
+                        </div>
+
+                        <a
+                            href="pages/resources.html?search=CSC%20305"
+                            class="course-link"
+                            aria-label="View CSC 305 resources"
+                        >
+                            →
+                        </a>
+
+                    </article>
+
+
+                    <!-- Course Card -->
+                    <article class="course-card">
+
+                        <div class="course-icon">
+                            MTH
+                        </div>
+
+                        <div class="course-content">
+
+                            <span class="course-code">
+                                MTH 201
+                            </span>
+
+                            <h3>
+                                Engineering Mathematics
+                            </h3>
+
+                            <p>
+                                Mathematics
+                            </p>
+
+                        </div>
+
+                        <a
+                            href="pages/resources.html?search=MTH%20201"
+                            class="course-link"
+                            aria-label="View MTH 201 resources"
+                        >
+                            →
+                        </a>
+
+                    </article>
+
+
+                    <!-- Course Card -->
+                    <article class="course-card">
+
+                        <div class="course-icon">
+                            PHY
+                        </div>
+
+                        <div class="course-content">
+
+                            <span class="course-code">
+                                PHY 203
+                            </span>
+
+                            <h3>
+                                Applied Physics
+                            </h3>
+
+                            <p>
+                                Physical Sciences
+                            </p>
+
+                        </div>
+
+                        <a
+                            href="pages/resources.html?search=PHY%20203"
+                            class="course-link"
+                            aria-label="View PHY 203 resources"
+                        >
+                            →
+                        </a>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             RESOURCE CATEGORIES
+        ========================== -->
+        <section class="categories-section">
+
+            <div class="container">
+
+                <div class="section-heading centered">
+
+                    <span class="section-label">
+                        ACADEMIC MATERIALS
+                    </span>
+
+                    <h2>
+                        Explore Resource Categories
+                    </h2>
+
+                    <p>
+                        Find the type of academic material
+                        you need for your studies.
+                    </p>
+
+                </div>
+
+
+                <div class="category-grid">
+
+                    <a
+                        href="pages/resources.html"
+                        class="category-card"
+                    >
+
+                        <div class="category-icon">
+                            LN
+                        </div>
+
+                        <h3>
+                            Lecture Notes
+                        </h3>
+
+                        <p>
+                            Study materials and course notes
+                            organized by course.
+                        </p>
+
+                        <span class="category-link">
+                            Explore Notes →
+                        </span>
+
+                    </a>
+
+
+                    <a
+                        href="pages/past-questions.html"
+                        class="category-card"
+                    >
+
+                        <div class="category-icon">
+                            PQ
+                        </div>
+
+                        <h3>
+                            Past Questions
+                        </h3>
+
+                        <p>
+                            Prepare for examinations using
+                            previous examination papers.
+                        </p>
+
+                        <span class="category-link">
+                            Find Past Questions →
+                        </span>
+
+                    </a>
+
+
+                    <a
+                        href="pages/resources.html"
+                        class="category-card"
+                    >
+
+                        <div class="category-icon">
+                            AS
+                        </div>
+
+                        <h3>
+                            Assignments
+                        </h3>
+
+                        <p>
+                            Access useful assignment materials
+                            and academic resources.
+                        </p>
+
+                        <span class="category-link">
+                            Explore Assignments →
+                        </span>
+
+                    </a>
+
+
+                    <a
+                        href="pages/resources.html"
+                        class="category-card"
+                    >
+
+                        <div class="category-icon">
+                            OR
+                        </div>
+
+                        <h3>
+                            Other Resources
+                        </h3>
+
+                        <p>
+                            Discover additional materials
+                            to support your learning.
+                        </p>
+
+                        <span class="category-link">
+                            Explore Resources →
+                        </span>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             HOW IT WORKS
+        ========================== -->
+        <section class="how-it-works-section">
+
+            <div class="container">
+
+                <div class="section-heading centered">
+
+                    <span class="section-label">
+                        SIMPLE & ORGANIZED
+                    </span>
+
+                    <h2>
+                        How CampusVault Works
+                    </h2>
+
+                    <p>
+                        Find the academic resources you need
+                        in three simple steps.
+                    </p>
+
+                </div>
+
+
+                <div class="steps-grid">
+
+                    <article class="step-card">
+
+                        <span class="step-number">
+                            01
+                        </span>
+
+                        <h3>
+                            Search
+                        </h3>
+
+                        <p>
+                            Search for your course, resource,
+                            or past examination question.
+                        </p>
+
+                    </article>
+
+
+                    <article class="step-card">
+
+                        <span class="step-number">
+                            02
+                        </span>
+
+                        <h3>
+                            Select
+                        </h3>
+
+                        <p>
+                            Choose the resource that matches
+                            your course and academic session.
+                        </p>
+
+                    </article>
+
+
+                    <article class="step-card">
+
+                        <span class="step-number">
+                            03
+                        </span>
+
+                        <h3>
+                            Study
+                        </h3>
+
+                        <p>
+                            View, download, save, and use
+                            your academic resources.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             RECENT RESOURCES
+        ========================== -->
+        <section class="resources-section">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <div>
+                        <span class="section-label">
+                            LATEST MATERIALS
+                        </span>
+
+                        <h2>
+                            Recently Added Resources
+                        </h2>
+                    </div>
+
+                    <a
+                        href="pages/resources.html"
+                        class="text-link"
+                    >
+                        View All Resources
+                    </a>
+
+                </div>
+
+
+                <div class="resource-grid">
+
+                    <!-- Resource Card -->
+                    <article class="resource-card">
+
+                        <div class="resource-card-header">
+
+                            <span class="resource-type">
+                                Lecture Note
+                            </span>
+
+                            <span class="file-type">
+                                PDF
+                            </span>
+
+                        </div>
+
+                        <div class="resource-card-body">
+
+                            <span class="resource-course">
+                                CSC 301
+                            </span>
+
+                            <h3>
+                                Data Structures Lecture Notes
+                            </h3>
+
+                            <p>
+                                Complete lecture materials covering
+                                fundamental data structures.
+                            </p>
+
+                            <div class="resource-meta">
+
+                                <span>
+                                    2025/2026
+                                </span>
+
+                                <span>
+                                    3.2 MB
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                        <div class="resource-card-footer">
+
+                            <a
+                                href="pages/resources-details.html"
+                                class="btn btn-secondary btn-small"
+                            >
+                                View Resource
+                            </a>
+
+                            <button
+                                type="button"
+                                class="icon-button"
+                                aria-label="Save Data Structures Lecture Notes"
+                            >
+                                ♡
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- Resource Card -->
+                    <article class="resource-card">
+
+                        <div class="resource-card-header">
+
+                            <span class="resource-type">
+                                Past Question
+                            </span>
+
+                            <span class="file-type">
+                                PDF
+                            </span>
+
+                        </div>
+
+                        <div class="resource-card-body">
+
+                            <span class="resource-course">
+                                CSC 305
+                            </span>
+
+                            <h3>
+                                Database Systems Past Questions
+                            </h3>
+
+                            <p>
+                                Previous examination questions for
+                                Database Systems.
+                            </p>
+
+                            <div class="resource-meta">
+
+                                <span>
+                                    2024/2025
+                                </span>
+
+                                <span>
+                                    1.8 MB
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                        <div class="resource-card-footer">
+
+                            <a
+                                href="pages/resource-details.html"
+                                class="btn btn-secondary btn-small"
+                            >
+                                View Resource
+                            </a>
+
+                            <button
+                                type="button"
+                                class="icon-button"
+                                aria-label="Save Database Systems Past Questions"
+                            >
+                                ♡
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- Resource Card -->
+                    <article class="resource-card">
+
+                        <div class="resource-card-header">
+
+                            <span class="resource-type">
+                                Lecture Note
+                            </span>
+
+                            <span class="file-type">
+                                PDF
+                            </span>
+
+                        </div>
+
+                        <div class="resource-card-body">
+
+                            <span class="resource-course">
+                                MTH 201
+                            </span>
+
+                            <h3>
+                                Engineering Mathematics Notes
+                            </h3>
+
+                            <p>
+                                Mathematics study materials covering
+                                core course topics.
+                            </p>
+
+                            <div class="resource-meta">
+
+                                <span>
+                                    2025/2026
+                                </span>
+
+                                <span>
+                                    4.1 MB
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                        <div class="resource-card-footer">
+
+                            <a
+                                href="pages/resource-details.html"
+                                class="btn btn-secondary btn-small"
+                            >
+                                View Resource
+                            </a>
+
+                            <button
+                                type="button"
+                                class="icon-button"
+                                aria-label="Save Engineering Mathematics Notes"
+                            >
+                                ♡
+                            </button>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             STUDENT CTA
+        ========================== -->
+        <section class="cta-section student-cta">
+
+            <div class="container cta-container">
+
+                <div class="cta-content">
+
+                    <span class="section-label">
+                        FOR STUDENTS
+                    </span>
+
+                    <h2>
+                        Make studying easier with
+                        CampusVault.
+                    </h2>
+
+                    <p>
+                        Find your course materials, save useful
+                        resources, and access your academic library
+                        whenever you need it.
+                    </p>
+
+                    <a
+                        href="pages/auth/register.html"
+                        class="btn btn-primary btn-large"
+                    >
+                        Create Your Account
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             LECTURER CTA
+        ========================== -->
+        <section class="cta-section lecturer-cta">
+
+            <div class="container cta-container">
+
+                <div class="cta-content">
+
+                    <span class="section-label">
+                        FOR LECTURERS
+                    </span>
+
+                    <h2>
+                        Help students access
+                        better academic resources.
+                    </h2>
+
+                    <p>
+                        Share approved lecture materials, past questions,
+                        assignments, and other resources with students.
+                    </p>
+
+                    <a
+                        href="pages/auth/register.html"
+                        class="btn btn-secondary btn-large"
+                    >
+                        Become a Contributor
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+    <footer class="site-footer">
+
+        <div class="container footer-container">
+
+            <div class="footer-brand">
+
+                <a
+                    href="index.html"
+                    class="logo footer-logo"
+                    aria-label="CampusVault Home"
+                >
+                    <span class="logo-icon">CV</span>
+                    <span class="logo-text">CampusVault</span>
+                </a>
+
+                <p>
+                    Your digital academic library for
+                    organized and accessible learning resources.
+                </p>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>
+                    Platform
+                </h3>
+
+                <ul>
+                    <li>
+                        <a href="pages/courses.html">Courses</a>
+                    </li>
+
+                    <li>
+                        <a href="pages/resources.html">Resources</a>
+                    </li>
+
+                    <li>
+                        <a href="pages/past-questions.html">
+                            Past Questions
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>
+                    Company
+                </h3>
+
+                <ul>
+                    <li>
+                        <a href="pages/about.html">About</a>
+                    </li>
+
+                    <li>
+                        <a href="pages/contact.html">Contact</a>
+                    </li>
+                </ul>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>
+                    Account
+                </h3>
+
+                <ul>
+                    <li>
+                        <a href="pages/auth/login.html">
+                            Login
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="pages/auth/register.html">
+                            Register
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <div class="container">
+
+                <p>
+                    &copy; 2026 CampusVault. All rights reserved.
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <script src="js/navigation.js"></script>
+    <script src="js/search.js"></script>
+</body>
+</html>

@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="View your recently accessed academic resources on CampusVault."
+    >
+
+    <title>Recently Viewed | CampusVault</title>
+
+    <link
+        rel="stylesheet"
+        href="../../css/style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../../css/responsive.css"
+    >
+    <script src="../../js/theme.js" defer></script>
+
+</head>
+
+
+<body>
+
+    <!-- =========================
+         HEADER
+    ========================== -->
+
+    <header class="site-header">
+
+        <div class="container header-container">
+
+            <a
+                href="../../index.html"
+                class="logo"
+                aria-label="CampusVault Home"
+            >
+                <span class="logo-icon">CV</span>
+
+                <span class="logo-text">
+                    CampusVault
+                </span>
+            </a>
+
+
+            <nav
+                class="desktop-navigation"
+                aria-label="Main navigation"
+            >
+
+                <a href="../../index.html">
+                    Home
+                </a>
+
+                <a href="../courses.html">
+                    Courses
+                </a>
+
+                <a href="../resources.html">
+                    Resources
+                </a>
+
+                <a href="../past-questions.html">
+                    Past Questions
+                </a>
+
+            </nav>
+
+
+            <div class="header-actions">
+
+                <a
+                    href="../auth/login.html"
+                    class="btn btn-secondary btn-small"
+                >
+                    Login
+                </a>
+
+                <a
+                    href="../auth/register.html"
+                    class="btn btn-primary btn-small"
+                >
+                    Register
+                </a>
+
+            </div>
+
+            <button
+                class="theme-toggle"
+                type="button"
+                aria-label="Switch to dark mode"
+                aria-pressed="false"
+            >
+                <span class="theme-toggle-icon" aria-hidden="true">☾</span>
+                <span class="theme-toggle-label">Dark mode</span>
+            </button>
+
+
+            <button
+                type="button"
+                class="mobile-menu-toggle"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+                aria-controls="mobile-navigation"
+            >
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </button>
+
+        </div>
+
+
+        <div
+            class="mobile-navigation"
+            id="mobile-navigation"
+        >
+
+            <a href="../../index.html">
+                Home
+            </a>
+
+            <a href="../courses.html">
+                Courses
+            </a>
+
+            <a href="../resources.html">
+                Resources
+            </a>
+
+            <a href="../past-questions.html">
+                Past Questions
+            </a>
+
+            <a href="../auth/login.html">
+                Login
+            </a>
+
+            <a href="../auth/register.html">
+                Register
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <!-- =========================
+             PAGE HEADER
+        ========================== -->
+
+        <section class="page-header">
+
+            <div class="container">
+
+                <span class="section-label">
+                    Student Library
+                </span>
+
+                <h1>
+                    Recently Viewed
+                </h1>
+
+                <p>
+                    Quickly return to academic resources
+                    you have recently accessed.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             RECENTLY VIEWED
+        ========================== -->
+
+        <section class="resources-section">
+
+            <div class="container">
+
+                <div class="section-heading-row">
+
+                    <div>
+
+                        <h2>
+                            Recently Viewed Resources
+                        </h2>
+
+                        <p>
+                            <span id="recent-resource-count">
+                                0 Resources
+                            </span>
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="resource-grid"
+                    id="recent-resources-container"
+                >
+
+                    <!-- Recently viewed resources
+                         will be inserted here -->
+
+                </div>
+
+
+                <!-- =========================
+                     EMPTY STATE
+                ========================== -->
+
+                <div
+                    class="empty-state"
+                    id="recent-resources-empty"
+                    hidden
+                >
+
+                    <h3>
+                        No Recently Viewed Resources
+                    </h3>
+
+                    <p>
+                        Resources you open will appear here
+                        so you can quickly return to them.
+                    </p>
+
+                    <a
+                        href="../resources.html"
+                        class="btn btn-primary"
+                    >
+                        Browse Resources
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer class="site-footer">
+
+        <div class="container">
+
+            <div class="footer-content">
+
+                <div class="footer-brand">
+
+                    <a
+                        href="../../index.html"
+                        class="logo"
+                    >
+
+                        <span class="logo-icon">
+                            CV
+                        </span>
+
+                        <span class="logo-text">
+                            CampusVault
+                        </span>
+
+                    </a>
+
+                    <p>
+                        A digital academic library designed
+                        to make learning resources easier to
+                        discover and access.
+                    </p>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h3>
+                        Platform
+                    </h3>
+
+                    <a href="../courses.html">
+                        Courses
+                    </a>
+
+                    <a href="../resources.html">
+                        Resources
+                    </a>
+
+                    <a href="../past-questions.html">
+                        Past Questions
+                    </a>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h3>
+                        Account
+                    </h3>
+
+                    <a href="../auth/login.html">
+                        Login
+                    </a>
+
+                    <a href="../auth/register.html">
+                        Register
+                    </a>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h3>
+                        CampusVault
+                    </h3>
+
+                    <a href="../about.html">
+                        About
+                    </a>
+
+                    <a href="../contact.html">
+                        Contact
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                <p>
+                    &copy; 2026 CampusVault.
+                    All rights reserved.
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script src="../../js/navigation.js"></script>
+
+    <script src="../../js/recently-viewed.js"></script>
+
+</body>
+
+</html>

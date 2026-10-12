@@ -1,0 +1,512 @@
+/* =========================================
+   CampusVault
+   Resource Details Page
+========================================= */
+
+
+/* =========================
+   BREADCRUMB
+========================= */
+
+.resource-breadcrumb-section {
+    padding: 24px 0 0;
+}
+
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    font-size: 14px;
+    color: var(--color-text-muted);
+}
+
+.breadcrumb a {
+    color: var(--color-primary);
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================
+   RESOURCE DETAILS SECTION
+========================= */
+
+.resource-details-section {
+    padding: 32px 0 80px;
+}
+
+.resource-details-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) minmax(280px, 1fr);
+    gap: 32px;
+    align-items: start;
+}
+
+
+/* =========================
+   MAIN RESOURCE CARD
+========================= */
+
+.resource-details-card {
+    padding: 32px;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+}
+
+.resource-details-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.resource-details-type {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 12px;
+    background: var(--color-primary-light);
+    color: var(--color-primary);
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.resource-file-type {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--color-text);
+}
+
+.resource-details-card h1 {
+    margin: 0 0 12px;
+    color: var(--color-heading);
+    font-size: 40px;
+    line-height: 1.2;
+}
+
+.resource-course {
+    margin: 0;
+    color: var(--color-primary);
+    font-size: 18px;
+    font-weight: 600;
+}
+
+
+/* =========================
+   RESOURCE META
+========================= */
+
+.resource-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 24px;
+}
+
+.resource-meta span {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 12px;
+    background: var(--color-background);
+    border-radius: 6px;
+    color: var(--color-text-muted);
+    font-size: 14px;
+}
+
+
+/* =========================
+   DESCRIPTION
+========================= */
+
+.resource-description {
+    margin-top: 32px;
+    padding-top: 32px;
+    border-top: 1px solid var(--color-border);
+}
+
+.resource-description h2 {
+    margin-bottom: 12px;
+    font-size: 22px;
+    color: var(--color-heading);
+}
+
+.resource-description p {
+    margin: 0;
+    color: var(--color-text-muted);
+    line-height: 1.7;
+}
+
+
+/* =========================
+   ACTIONS
+========================= */
+
+.resource-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 32px;
+}
+
+
+/* =========================
+   INFORMATION CARD
+========================= */
+
+.resource-info-card {
+    padding: 28px;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+}
+
+.resource-info-card h2 {
+    margin: 0 0 24px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--color-border);
+    color: var(--color-heading);
+    font-size: 22px;
+}
+
+
+/* =========================
+   INFORMATION LIST
+========================= */
+
+.resource-information-list {
+    margin: 0;
+}
+
+.resource-information-list > div {
+    padding: 16px 0;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.resource-information-list > div:first-child {
+    padding-top: 0;
+}
+
+.resource-information-list > div:last-child {
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.resource-information-list dt {
+    margin-bottom: 6px;
+    color: var(--color-text-muted);
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.resource-information-list dd {
+    margin: 0;
+    color: var(--color-heading);
+    font-size: 15px;
+    font-weight: 600;
+}
+
+
+/* =========================
+   PDF PREVIEW
+========================= */
+
+.pdf-preview-section {
+    margin-top: 48px;
+}
+
+.pdf-preview-section .section-heading {
+    margin-bottom: 20px;
+}
+
+.section-eyebrow {
+    display: block;
+    margin-bottom: 6px;
+    color: var(--color-primary);
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.pdf-preview {
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+}
+
+.pdf-preview-placeholder {
+    max-width: 420px;
+    text-align: center;
+}
+
+.pdf-icon {
+    width: 72px;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    background: var(--color-primary-light);
+    color: var(--color-primary);
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.pdf-preview-placeholder h3 {
+    margin-bottom: 8px;
+    color: var(--color-heading);
+    font-size: 22px;
+}
+
+.pdf-preview-placeholder p {
+    margin-bottom: 24px;
+    color: var(--color-text-muted);
+    line-height: 1.6;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 767px) {
+
+    .resource-details-section {
+        padding: 24px 0 56px;
+    }
+
+    .resource-details-layout {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .resource-details-card {
+        padding: 24px;
+    }
+
+    .resource-details-card h1 {
+        font-size: 30px;
+    }
+
+    .resource-info-card {
+        padding: 24px;
+    }
+
+    .pdf-preview {
+        min-height: 360px;
+        padding: 24px;
+    }
+
+    .resource-actions {
+        flex-direction: column;
+    }
+
+    .resource-actions .btn {
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 375px) {
+
+    .resource-details-card {
+        padding: 20px;
+    }
+
+    .resource-details-card h1 {
+        font-size: 26px;
+    }
+
+    .resource-details-header {
+        align-items: flex-start;
+    }
+
+    .resource-meta {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .pdf-preview {
+        min-height: 320px;
+        padding: 20px;
+    }
+}
+/* =========================
+   PDF VIEWER
+========================= */
+
+.pdf-viewer {
+    width: 100%;
+    height: 700px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    background-color: #ffffff;
+    display: block;
+}
+
+body.dark-mode .pdf-viewer {
+    border-color: var(--color-border);
+    background-color: var(--color-surface);
+}
+
+/* ========================================
+   RESOURCE DETAILS — DARK MODE FIX
+======================================== */
+
+body.dark-mode {
+    background-color: #0F172A;
+    color: #E2E8F0;
+}
+
+/* Breadcrumb navigation */
+body.dark-mode .breadcrumb,
+body.dark-mode .breadcrumbs {
+    background-color: #1E293B;
+    color: #E2E8F0;
+}
+
+body.dark-mode .breadcrumb a,
+body.dark-mode .breadcrumbs a {
+    color: #93C5FD;
+}
+
+/* Main resource details card */
+body.dark-mode .resource-details-card,
+body.dark-mode .resource-main,
+body.dark-mode .resource-content {
+    background-color: #1E293B;
+    color: #E2E8F0;
+    border-color: var(--color-border);
+}
+
+/* Resource title and headings */
+body.dark-mode .resource-details-card h1,
+body.dark-mode .resource-details-card h2,
+body.dark-mode .resource-main h1,
+body.dark-mode .resource-main h2,
+body.dark-mode .resource-content h1,
+body.dark-mode .resource-content h2 {
+    color: #F8FAFC;
+}
+
+/* Resource description and metadata */
+body.dark-mode .resource-details-card p,
+body.dark-mode .resource-main p,
+body.dark-mode .resource-content p {
+    color: #CBD5E1;
+}
+
+/* Resource information sidebar */
+body.dark-mode .resource-info,
+body.dark-mode .resource-information,
+body.dark-mode .resource-sidebar,
+body.dark-mode .resource-info-card {
+    background-color: #1E293B;
+    color: #E2E8F0;
+    border-color: var(--color-border);
+}
+
+/* Sidebar headings and labels */
+body.dark-mode .resource-info h2,
+body.dark-mode .resource-information h2,
+body.dark-mode .resource-sidebar h2,
+body.dark-mode .resource-info-card h2,
+body.dark-mode .resource-info label,
+body.dark-mode .resource-information label,
+body.dark-mode .resource-sidebar label,
+body.dark-mode .resource-info-card label {
+    color: #F8FAFC;
+}
+
+/* Sidebar values and text */
+body.dark-mode .resource-info p,
+body.dark-mode .resource-information p,
+body.dark-mode .resource-sidebar p,
+body.dark-mode .resource-info-card p,
+body.dark-mode .resource-info span,
+body.dark-mode .resource-information span,
+body.dark-mode .resource-sidebar span,
+body.dark-mode .resource-info-card span {
+    color: #CBD5E1;
+}
+
+/* Dividers */
+body.dark-mode .resource-info hr,
+body.dark-mode .resource-information hr,
+body.dark-mode .resource-sidebar hr,
+body.dark-mode .resource-info-card hr {
+    border-color: var(--color-border);
+}
+
+/* Navigation header */
+body.dark-mode header {
+    background-color: #0F172A;
+    border-color: var(--color-border);
+}
+
+body.dark-mode header a {
+    color: #E2E8F0;
+}
+
+/* Buttons */
+body.dark-mode .resource-details-card button,
+body.dark-mode .resource-main button,
+body.dark-mode .resource-content button {
+    color: #F8FAFC;
+}
+
+/* Disabled buttons */
+body.dark-mode button:disabled,
+body.dark-mode .btn:disabled {
+    background-color: #334155;
+    color: #94A3B8;
+    border-color: #475569;
+    opacity: 1;
+}
+
+/* ========================================
+   RESOURCE DETAILS — DARK MODE BUTTON FIX
+======================================== */
+
+/* Download PDF and Save Resource buttons */
+body.dark-mode .resource-details-card .btn-secondary,
+body.dark-mode .resource-details-card .btn-outline,
+body.dark-mode .resource-details-card .btn-download,
+body.dark-mode .resource-details-card .btn-save,
+body.dark-mode .resource-main .btn-secondary,
+body.dark-mode .resource-main .btn-outline,
+body.dark-mode .resource-main .btn-download,
+body.dark-mode .resource-main .btn-save {
+    background-color: #334155;
+    color: #F8FAFC;
+    border: 1px solid var(--color-border);
+}
+
+/* Hover effect */
+body.dark-mode .resource-details-card .btn-secondary:hover,
+body.dark-mode .resource-details-card .btn-outline:hover,
+body.dark-mode .resource-details-card .btn-download:hover,
+body.dark-mode .resource-details-card .btn-save:hover,
+body.dark-mode .resource-main .btn-secondary:hover,
+body.dark-mode .resource-main .btn-outline:hover,
+body.dark-mode .resource-main .btn-download:hover,
+body.dark-mode .resource-main .btn-save:hover {
+    background-color: #475569;
+    color: #FFFFFF;
+    border-color: #64748B;
+}

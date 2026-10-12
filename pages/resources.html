@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Browse and discover academic resources on CampusVault."
+    >
+
+    <title>Resources | CampusVault</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <script src="../js/theme.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="site-header">
+
+        <div class="container header-inner">
+
+            <a href="../index.html" class="logo">
+                <span class="logo-mark">CV</span>
+                <span class="logo-text">CampusVault</span>
+            </a>
+
+            <nav class="desktop-navigation" aria-label="Main navigation">
+                <a href="../index.html">Home</a>
+                <a href="courses.html">Courses</a>
+                <a href="resources.html" class="active">Resources</a>
+                <a href="past-questions.html">Past Questions</a>
+            </nav>
+
+            <div class="header-actions">
+                <a href="auth/login.html" class="btn btn-secondary btn-small">
+                    Login
+                </a>
+
+                <a href="auth/register.html" class="btn btn-primary btn-small">
+                    Register
+                </a>
+            </div>
+
+            <button
+                class="theme-toggle"
+                type="button"
+                aria-label="Switch to dark mode"
+                aria-pressed="false"
+            >
+                <span class="theme-toggle-icon" aria-hidden="true">☾</span>
+                <span class="theme-toggle-label">Dark mode</span>
+            </button>
+
+            <button
+                class="mobile-menu-toggle"
+                type="button"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+                aria-controls="mobile-navigation"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+        </div>
+
+        <nav
+            class="mobile-navigation"
+            id="mobile-navigation"
+            aria-label="Mobile navigation"
+        >
+            <a href="../index.html">Home</a>
+            <a href="courses.html">Courses</a>
+            <a href="resources.html">Resources</a>
+            <a href="past-questions.html">Past Questions</a>
+            <a href="auth/login.html">Login</a>
+            <a href="auth/register.html">Register</a>
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container">
+
+                <span class="section-badge">
+                    Academic Library
+                </span>
+
+                <h1>Academic Resources</h1>
+
+                <p>
+                    Find lecture notes, past questions, assignments,
+                    and other academic materials.
+                </p>
+
+            </div>
+        </section>
+
+
+        <!-- Resource Search -->
+        <section class="resource-search-section">
+            <div class="container">
+
+                <form id="resource-search-form">
+
+                    <label for="resource-search">
+                        Search resources
+                    </label>
+
+                    <div class="resource-search-wrapper">
+
+                        <input
+                            type="search"
+                            id="resource-search"
+                            name="search"
+                            placeholder="Search by course code, title, or keyword..."
+                        >
+
+                        <button
+                            type="submit"
+                            class="btn btn-primary"
+                        >
+                            Search
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </div>
+        </section>
+
+
+        <!-- Resources -->
+        <section class="resources-page-section">
+
+            <div class="container">
+
+                <div class="resources-layout">
+
+                    <!-- Filters -->
+                    <aside class="resource-filters">
+
+                        <div class="filter-header">
+                            <h2>Filters</h2>
+                        </div>
+
+                        <div class="filter-group">
+
+                            <label for="resource-type">
+                                Resource Type
+                            </label>
+
+                            <select id="resource-type">
+                                <option value="">All Types</option>
+                                <option value="lecture-notes">
+                                    Lecture Notes
+                                </option>
+                                <option value="past-questions">
+                                    Past Questions
+                                </option>
+                                <option value="assignments">
+                                    Assignments
+                                </option>
+                                <option value="other">
+                                    Other Resources
+                                </option>
+                            </select>
+
+                        </div>
+
+
+                        <div class="filter-group">
+
+                            <label for="resource-level">
+                                Level
+                            </label>
+
+                            <select id="resource-level">
+                                <option value="">All Levels</option>
+                                <option value="100">100 Level</option>
+                                <option value="200">200 Level</option>
+                                <option value="300">300 Level</option>
+                                <option value="400">400 Level</option>
+                                <option value="500">500 Level</option>
+                            </select>
+
+                        </div>
+
+
+                        <div class="filter-group">
+
+                            <label for="resource-session">
+                                Academic Session
+                            </label>
+
+                            <select id="resource-session">
+                                <option value="">All Sessions</option>
+                                <option value="2025-2026">
+                                    2025/2026
+                                </option>
+                                <option value="2024-2025">
+                                    2024/2025
+                                </option>
+                                <option value="2023-2024">
+                                    2023/2024
+                                </option>
+                            </select>
+
+                        </div>
+
+                    </aside>
+
+
+                    <!-- Resource Results -->
+                    <div class="resource-results">
+
+                        <div class="resource-results-header">
+
+                            <div>
+                                <h2>Available Resources</h2>
+
+                                <p>
+                                    Browse available academic materials.
+                                </p>
+                            </div>
+
+                            <span 
+                                class="resource-count"
+                                id="resource-count"
+                            >
+                                6 Resources
+                            </span>
+
+                        </div>
+
+
+                        <div class="resource-grid">
+
+
+                            <!-- Resource 1 -->
+                            <article
+                                 class="resource-card"
+                                 data-type="lecture-notes"
+                                 data-level="300"
+                                 data-session="2025-2026"
+                            >
+
+                                <div class="resource-card-top">
+                                    <span class="resource-type">
+                                        Lecture Notes
+                                    </span>
+
+                                    <span class="file-type">
+                                        PDF
+                                    </span>
+                                </div>
+
+                                <h3>
+                                    Data Structures and Algorithms
+                                </h3>
+
+                                <p class="resource-course">
+                                    CSC 301
+                                </p>
+
+                                <div class="resource-meta">
+
+                                    <span>
+                                        300 Level
+                                    </span>
+
+                                    <span>
+                                        2025/2026
+                                    </span>
+
+                                </div>
+
+                                <div class="resource-card-footer">
+
+                                    <span>
+                                        Uploaded recently
+                                    </span>
+
+                                    <a
+                                        href="resources-details.html?id=csc301-data-structures"
+                                        class="btn btn-primary"
+                                    >
+                                        View
+                                    </a>
+
+                                </div>
+
+                            </article>
+
+
+                            <!-- Resource 2 -->
+                            <article
+                                 class="resource-card"
+                                 data-type="lecture-notes"
+                                 data-level="300"
+                                 data-session="2025-2026"
+                            >
+
+                                <div class="resource-card-top">
+                                    <span class="resource-type">
+                                        Lecture Notes
+                                    </span>
+
+                                    <span class="file-type">
+                                        PDF
+                                    </span>
+                                </div>
+
+                                <h3>
+                                    Database Management Systems
+                                </h3>
+
+                                <p class="resource-course">
+                                    CSC 305
+                                </p>
+
+                                <div class="resource-meta">
+
+                                    <span>
+                                        300 Level
+                                    </span>
+
+                                    <span>
+                                        2025/2026
+                                    </span>
+
+                                </div>
+
+                                <div class="resource-card-footer">
+
+                                    <span>
+                                        Uploaded recently
+                                    </span>
+
+                                    <a
+                                        href="resources-details.html?id=csc305-database"
+                                        class="btn btn-primary"
+                                    >
+                                        View
+                                    </a>
+
+                                </div>
+
+                            </article>
+
+
+                            <!-- Resource 3 -->
+                            <article 
+                                class="resource-card"
+                                data-type="past-questions"
+                                data-level="200"
+                                data-session="2024-2025"
+                            >
+
+                                <div class="resource-card-top">
+                                    <span class="resource-type">
+                                        Past Questions
+                                    </span>
+
+                                    <span class="file-type">
+                                        PDF
+                                    </span>
+                                </div>
+
+                                <h3>
+                                    Engineering Mathematics II
+                                </h3>
+
+                                <p class="resource-course">
+                                    MTH 201
+                                </p>
+
+                                <div class="resource-meta">
+
+                                    <span>
+                                        200 Level
+                                    </span>
+
+                                    <span>
+                                        2024/2025
+                                    </span>
+
+                                </div>
+
+                                <div class="resource-card-footer">
+
+                                    <span>
+                                        Uploaded recently
+                                    </span>
+
+                                    <a
+                                        href="resources-details.html?id=mth201-engineering-math-ii"
+                                        class="btn btn-primary"
+                                    >
+                                        View
+                                    </a>
+
+                                </div>
+
+                            </article>
+
+
+                            <!-- Resource 4 -->
+                            <article
+                                 class="resource-card"
+                                 data-type="past-questions"
+                                 data-level="200"
+                                 data-session="2024-2025"
+                            >
+
+                                <div class="resource-card-top">
+                                    <span class="resource-type">
+                                        Past Questions
+                                    </span>
+
+                                    <span class="file-type">
+                                        PDF
+                                    </span>
+                                </div>
+
+                                <h3>
+                                    Applied Physics
+                                </h3>
+
+                                <p class="resource-course">
+                                    PHY 203
+                                </p>
+
+                                <div class="resource-meta">
+
+                                    <span>
+                                        200 Level
+                                    </span>
+
+                                    <span>
+                                        2024/2025
+                                    </span>
+
+                                </div>
+
+                                <div class="resource-card-footer">
+
+                                    <span>
+                                        Uploaded recently
+                                    </span>
+
+                                    <a
+                                        href="resources-details.html?id=phy203-applied-physics"
+                                        class="btn btn-primary"
+                                    >
+                                        View
+                                    </a>
+
+                                </div>
+
+                            </article>
+
+
+                            <!-- Resource 5 -->
+                            <article
+                                 class="resource-card"
+                                 data-type="assignments"
+                                 data-level="200"
+                                 data-session="2025-2026"
+                            >
+
+                                <div class="resource-card-top">
+                                    <span class="resource-type">
+                                        Assignment
+                                    </span>
+
+                                    <span class="file-type">
+                                        PDF
+                                    </span>
+                                </div>
+
+                                <h3>
+                                    Introduction to Programming
+                                </h3>
+
+                                <p class="resource-course">
+                                    CSC 201
+                                </p>
+
+                                <div class="resource-meta">
+
+                                    <span>
+                                        200 Level
+                                    </span>
+
+                                    <span>
+                                        2025/2026
+                                    </span>
+
+                                </div>
+
+                                <div class="resource-card-footer">
+
+                                    <span>
+                                        Uploaded recently
+                                    </span>
+
+                                    <a
+                                        href="resources-details.html?id=csc201-intro-to-programming"
+                                        class="btn btn-primary"
+                                    >
+                                        View
+                                    </a>
+
+                                </div>
+
+                            </article>
+
+
+                            <!-- Resource 6 -->
+                            <article 
+                                 class="resource-card"
+                                 data-type="lecture-notes"
+                                 data-level="300"
+                                 data-session="2025-2026"
+                            >
+
+                                <div class="resource-card-top">
+                                    <span class="resource-type">
+                                        Lecture Notes
+                                    </span>
+
+                                    <span class="file-type">
+                                        PDF
+                                    </span>
+                                </div>
+
+                                <h3>
+                                    Computer Architecture
+                                </h3>
+
+                                <p class="resource-course">
+                                    CSC 307
+                                </p>
+
+                                <div class="resource-meta">
+
+                                    <span>
+                                        300 Level
+                                    </span>
+
+                                    <span>
+                                        2025/2026
+                                    </span>
+
+                                </div>
+
+                                <div class="resource-card-footer">
+
+                                    <span>
+                                        Uploaded recently
+                                    </span>
+
+                                    <a
+                                        href="resources-details.html?id=csc307-computer-architecture"
+                                        class="btn btn-primary"
+                                    >
+                                        View
+                                    </a>
+
+                                </div>
+
+                            </article>
+
+                            <p
+                                class="no-results-message"
+                                id="no-results-message"
+                                hidden
+                            >
+                                No resources found matching your criteria.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="site-footer">
+
+        <div class="container">
+
+            <div class="footer-bottom">
+
+                <p>
+                    &copy; 2026 CampusVault. All rights reserved.
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <script src="../js/navigation.js"></script>
+    <script src="../js/resource-filters.js"></script>
+</body>
+</html>
