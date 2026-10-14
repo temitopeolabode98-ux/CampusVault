@@ -81,11 +81,36 @@ const savedResourceCount =
 
 function getSavedResources() {
 
-    return JSON.parse(
-        localStorage.getItem(
+    try {
+
+        const stored = localStorage.getItem(
             "campusVaultSavedResources"
-        )
-    ) || [];
+        );
+
+        if (!stored) {
+            return [];
+        }
+
+        const parsed = JSON.parse(stored);
+
+        if (!Array.isArray(parsed)) {
+            return [];
+        }
+
+        return parsed.filter(
+            (id) => typeof id === "string" && id.length > 0
+        );
+
+    } catch (error) {
+
+        console.error(
+            "Unable to read saved resources:",
+            error
+        );
+
+        return [];
+
+    }
 
 }
 
@@ -101,24 +126,7 @@ function displaySavedResources() {
 
     savedResourcesContainer.innerHTML = "";
 
-    savedResourceCount.textContent =
-        `${savedIds.length} ${
-            savedIds.length === 1
-                ? "Resource"
-                : "Resources"
-        }`;
-
-
-    if (savedIds.length === 0) {
-
-        savedResourcesEmpty.hidden = false;
-
-        return;
-
-    }
-
-
-    savedResourcesEmpty.hidden = true;
+    let renderedCount = 0;
 
 
     savedIds.forEach((resourceId) => {
@@ -127,16 +135,72 @@ function displaySavedResources() {
             savedResourceData[resourceId];
 
 
-        if (!resource) {
-            return;
-        }
-
-
         const card =
             document.createElement("article");
 
         card.className =
             "resource-card";
+
+
+        if (!resource) {
+
+            /*
+             * The id no longer maps to a known resource.
+             * Render a clearly marked card so the counter
+             * stays accurate and the entry can still be
+             * removed from the list.
+             */
+
+            card.classList.add(
+                "resource-card-unavailable"
+            );
+
+            card.innerHTML = `
+
+                <div class="resource-card-header">
+
+                    <span class="resource-type-badge">
+                        Unavailable
+                    </span>
+
+                </div>
+
+
+                <div class="resource-card-body">
+
+                    <h3>
+                        Resource no longer available
+                    </h3>
+
+                    <p>
+                        This saved item is no longer
+                        part of the library.
+                    </p>
+
+                </div>
+
+
+                <div class="resource-card-actions">
+
+                    <button
+                        type="button"
+                        class="btn btn-secondary btn-small remove-saved-resource"
+                        data-resource-id="${resourceId}"
+                    >
+                        Remove
+                    </button>
+
+                </div>
+
+            `;
+
+            savedResourcesContainer.appendChild(card);
+
+            renderedCount++;
+
+            return;
+
+        }
 
 
         card.innerHTML = `
@@ -199,7 +263,25 @@ function displaySavedResources() {
 
         savedResourcesContainer.appendChild(card);
 
+        renderedCount++;
+
     });
+
+
+    /*
+     * The counter reports what is actually on screen, and
+     * the empty state shows whenever nothing rendered.
+     */
+
+    savedResourceCount.textContent =
+        `${renderedCount} ${
+            renderedCount === 1
+                ? "Resource"
+                : "Resources"
+        }`;
+
+
+    savedResourcesEmpty.hidden = renderedCount !== 0;
 
 
     attachRemoveListeners();

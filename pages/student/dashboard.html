@@ -97,11 +97,19 @@
                 </a>
 
                 <a
-                    href="../../index.html"
-                    class="btn btn-primary btn-small"
+                    href="settings.html"
+                    class="btn btn-secondary btn-small"
+                >
+                    Settings
+                </a>
+
+                <button
+                    type="button"
+                    class="btn btn-primary btn-small logout-button"
+                    title="Sign-out is not available yet in this preview"
                 >
                     Logout
-                </a>
+                </button>
 
             </div>
 
@@ -133,9 +141,10 @@
         </div>
 
 
-        <div
+        <nav
             class="mobile-navigation"
             id="mobile-navigation"
+            aria-label="Mobile navigation"
         >
 
             <a href="../../index.html">
@@ -154,15 +163,35 @@
                 Past Questions
             </a>
 
+            <a href="dashboard.html" class="active">
+                Dashboard
+            </a>
+
             <a href="profile.html">
                 Profile
             </a>
 
-            <a href="../../index.html">
-                Logout
+            <a href="saved-resources.html">
+                Saved Resources
             </a>
 
-        </div>
+            <a href="recently-viewed.html">
+                Recently Viewed
+            </a>
+
+            <a href="settings.html">
+                Settings
+            </a>
+
+            <button
+                type="button"
+                class="logout-button"
+                title="Sign-out is not available yet in this preview"
+            >
+                Logout
+            </button>
+
+        </nav>
 
     </header>
 
@@ -421,7 +450,7 @@
 
                     <a
                         href="../../index.html"
-                        class="logo"
+                        class="logo footer-logo"
                     >
 
                         <span class="logo-icon">
@@ -515,6 +544,7 @@
 
 
     <script src="../../js/navigation.js"></script>
+    <script src="../../js/logout.js"></script>
     <script src="../../js/dashboard.js"></script>
     <script src="../../js/dashboard-stats.js"></script>
 </body>

@@ -364,6 +364,53 @@ body.dark-mode .pdf-viewer {
     background-color: var(--color-surface);
 }
 
+/* Shown when a resource has no uploaded document file. */
+.pdf-preview-unavailable {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    min-height: 320px;
+    padding: 32px 24px;
+    border: 1px dashed var(--color-border);
+    border-radius: var(--radius-lg);
+    background-color: var(--color-background);
+    text-align: center;
+}
+
+.pdf-preview-unavailable-title {
+    color: var(--color-heading);
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.pdf-preview-unavailable-text {
+    max-width: 460px;
+    color: var(--color-text-light);
+    font-size: 14px;
+}
+
+body.dark-mode .pdf-preview-unavailable {
+    background-color: var(--color-background);
+    border-color: var(--color-border);
+}
+
+body.dark-mode .pdf-preview-unavailable-title {
+    color: var(--color-heading);
+}
+
+body.dark-mode .pdf-preview-unavailable-text {
+    color: var(--color-text-light);
+}
+
+/* Disabled action buttons stay legible in both themes. */
+.resource-actions .btn:disabled {
+    cursor: not-allowed;
+    opacity: 0.55;
+}
+
 /* ========================================
    RESOURCE DETAILS — DARK MODE FIX
 ======================================== */

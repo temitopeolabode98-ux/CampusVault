@@ -82,11 +82,36 @@ const dashboardRecentEmpty =
 
 function getDashboardRecentlyViewed() {
 
-    return JSON.parse(
-        localStorage.getItem(
+    try {
+
+        const stored = localStorage.getItem(
             "campusVaultRecentlyViewed"
-        )
-    ) || [];
+        );
+
+        if (!stored) {
+            return [];
+        }
+
+        const parsed = JSON.parse(stored);
+
+        if (!Array.isArray(parsed)) {
+            return [];
+        }
+
+        return parsed.filter(
+            (id) => typeof id === "string" && id.length > 0
+        );
+
+    } catch (error) {
+
+        console.error(
+            "Unable to read recently viewed resources:",
+            error
+        );
+
+        return [];
+
+    }
 
 }
 
