@@ -831,28 +831,14 @@ p {
     background-color: var(--color-surface);
 }
 
-.resource-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
-}
-
-.resource-card {
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    border: 1px solid var(--color-border);
-    border-radius: var(--radius-md);
-    background-color: var(--color-surface);
-    transition:
-        transform var(--transition-normal),
-        box-shadow var(--transition-normal);
-}
-
-.resource-card:hover {
-    transform: translateY(-3px);
-    box-shadow: var(--shadow-md);
-}
+/* This homepage section and the RESOURCES PAGE block further
+   down the file render the same resource cards, so the shared
+   rules for .resource-grid, .resource-card, .resource-type,
+   .file-type, .resource-course, .resource-meta and
+   .resource-card-footer are declared once in that later block,
+   which wins the cascade for every property it defines.
+   Only the wrappers used by these homepage cards are declared
+   here. */
 
 .resource-card-header {
     display: flex;
@@ -863,58 +849,14 @@ p {
     border-bottom: 1px solid var(--color-border);
 }
 
-.resource-type {
-    padding: 5px 9px;
-    border-radius: var(--radius-full);
-    color: var(--color-primary-dark);
-    background-color: var(--color-primary-light);
-    font-size: 12px;
-    font-weight: 600;
-}
-
-.file-type {
-    color: var(--color-text-light);
-    font-size: 12px;
-    font-weight: 700;
-}
-
 .resource-card-body {
     flex: 1;
     padding: 20px;
 }
 
-.resource-course {
-    color: var(--color-primary);
-    font-size: 12px;
-    font-weight: 700;
-}
-
-.resource-card-body h3 {
-    margin-top: 6px;
-    font-size: 19px;
-}
-
 .resource-card-body p {
     margin-top: 10px;
     font-size: 14px;
-}
-
-.resource-meta {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 16px;
-    margin-top: 18px;
-    color: var(--color-text-light);
-    font-size: 12px;
-}
-
-.resource-card-footer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 12px;
-    padding: 16px 20px;
-    border-top: 1px solid var(--color-border);
 }
 
 .icon-button {
@@ -1298,6 +1240,7 @@ select:focus-visible {
 .resource-card {
     display: flex;
     flex-direction: column;
+    overflow: hidden;
     min-height: 260px;
     padding: 24px;
     background-color: var(--color-surface);
@@ -1374,7 +1317,10 @@ body.dark-mode .resource-card-unavailable {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
+    margin-top: 18px;
     margin-bottom: 24px;
+    color: var(--color-text-light);
+    font-size: 12px;
 }
 
 .resource-meta span {
@@ -1391,7 +1337,7 @@ body.dark-mode .resource-card-unavailable {
     justify-content: space-between;
     gap: 16px;
     margin-top: auto;
-    padding-top: 16px;
+    padding: 16px 20px;
     border-top: 1px solid var(--color-border);
 }
 
@@ -1468,13 +1414,6 @@ body.dark-mode {
     color-scheme: dark;
 }
 
-/* Header and navigation */
-body.dark-mode header,
-body.dark-mode .header,
-body.dark-mode nav {
-    background-color: #1E293B;
-    border-color: #334155;
-}
 
 /* Main content sections */
 body.dark-mode section,
@@ -1484,7 +1423,6 @@ body.dark-mode .section {
 
 /* Cards */
 body.dark-mode .card,
-body.dark-mode .resource-card,
 body.dark-mode .category-card,
 body.dark-mode .stat-card,
 body.dark-mode .dashboard-card {
@@ -1542,19 +1480,11 @@ body.dark-mode td {
     border-color: #334155;
 }
 
-body.dark-mode th {
-    background-color: #1E293B;
-    color: #F8FAFC;
-}
 
 /* ========================================
    CAMPUSVAULT — DARK MODE REFINEMENTS
+   (body background/color already set in GLOBAL DARK MODE above)
 ======================================== */
-
-body.dark-mode {
-    background: #0F172A;
-    color: #E2E8F0;
-}
 
 /* Main page containers */
 body.dark-mode main,
@@ -1566,7 +1496,6 @@ body.dark-mode .page-content {
 
 /* Cards and panels */
 body.dark-mode .card,
-body.dark-mode .resource-card,
 body.dark-mode .category-card,
 body.dark-mode .stat-card,
 body.dark-mode .dashboard-card,
@@ -1605,11 +1534,6 @@ body.dark-mode textarea {
     border: 1px solid #475569;
 }
 
-/* Placeholder text */
-body.dark-mode input::placeholder,
-body.dark-mode textarea::placeholder {
-    color: #94A3B8;
-}
 
 /* Buttons */
 body.dark-mode button {
@@ -1624,11 +1548,6 @@ body.dark-mode nav {
     border-color: #334155;
 }
 
-/* Footer */
-body.dark-mode footer {
-    background-color: #020617;
-    color: #CBD5E1;
-}
 
 /* Dividers */
 body.dark-mode hr {
@@ -1663,12 +1582,7 @@ body.dark-mode textarea:focus-visible {
    CAMPUSVAULT — DARK MODE RESOURCE BADGES
 ======================================== */
 
-/* Resource type badges */
-body.dark-mode .resource-type-badge {
-    background-color: #334155;
-    color: #BFDBFE;
-    border: 1px solid #475569;
-}
+
 
 /* Course codes */
 body.dark-mode .resource-course {
@@ -1684,20 +1598,6 @@ body.dark-mode .resource-session {
     border-color: #475569;
 }
 
-/* View buttons */
-body.dark-mode .btn-primary,
-body.dark-mode .dashboard-resource-action .btn {
-    background-color: #2563EB;
-    color: #FFFFFF;
-    border-color: #2563EB;
-}
-
-body.dark-mode .btn-primary:hover,
-body.dark-mode .dashboard-resource-action .btn:hover {
-    background-color: #1D4ED8;
-    color: #FFFFFF;
-    border-color: #1D4ED8;
-}
 /* ========================================
    DARK MODE — RESOURCES PAGE
 ======================================== */
@@ -1706,6 +1606,7 @@ body.dark-mode .resource-card {
     background-color: #1E293B;
     border-color: #334155;
     color: #E2E8F0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 body.dark-mode .resource-card h3,
@@ -1722,6 +1623,7 @@ body.dark-mode .resource-card p {
 body.dark-mode .resource-type-badge {
     background-color: #1E3A8A;
     color: #BFDBFE;
+    border: 1px solid #475569;
 }
 
 /* Search and filter controls */
@@ -1837,19 +1739,10 @@ body.dark-mode .resource-count {
     color: #DBEAFE;
 }
 
-body.dark-mode .resource-card {
-    background-color: #1E293B;
-    border-color: #334155;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
-
 body.dark-mode .resource-card:hover {
     border-color: #475569;
 }
 
-body.dark-mode .resource-card h3 {
-    color: #F8FAFC;
-}
 
 body.dark-mode .resource-card .resource-type {
     background-color: #1E3A8A;
@@ -1864,10 +1757,6 @@ body.dark-mode .resource-card .resource-course {
     color: #93C5FD;
 }
 
-body.dark-mode .resource-meta span {
-    background-color: #334155;
-    color: #E2E8F0;
-}
 
 body.dark-mode .resource-card-footer {
     border-color: #334155;

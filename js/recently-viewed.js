@@ -8,57 +8,8 @@
    RESOURCE DATA
 ========================= */
 
-const recentResourceData = {
+const recentResourceData = CAMPUSVAULT_RESOURCES;
 
-    "csc301-data-structures": {
-        title: "Data Structures and Algorithms",
-        course: "CSC 301",
-        type: "Lecture Notes",
-        level: "300 Level",
-        session: "2025/2026"
-    },
-
-    "csc305-database": {
-        title: "Database Management Systems",
-        course: "CSC 305",
-        type: "Lecture Notes",
-        level: "300 Level",
-        session: "2025/2026"
-    },
-
-    "mth201-engineering-mathematics": {
-        title: "Engineering Mathematics II",
-        course: "MTH 201",
-        type: "Past Questions",
-        level: "200 Level",
-        session: "2024/2025"
-    },
-
-    "phy203-applied-physics": {
-        title: "Applied Physics",
-        course: "PHY 203",
-        type: "Past Questions",
-        level: "200 Level",
-        session: "2024/2025"
-    },
-
-    "intro-programming": {
-        title: "Introduction to Programming",
-        course: "CSC 201",
-        type: "Assignment",
-        level: "200 Level",
-        session: "2025/2026"
-    },
-
-    "csc307-computer-architecture": {
-        title: "Computer Architecture",
-        course: "CSC 307",
-        type: "Lecture Notes",
-        level: "300 Level",
-        session: "2025/2026"
-    }
-
-};
 
 
 /* =========================

@@ -3,80 +3,8 @@
  * Resource Details
  */
 
-const resources = {
-    "csc301-data-structures": {
-        title: "Data Structures and Algorithms",
-        course: "CSC 301",
-        type: "Lecture Notes",
-        level: "300 Level",
-        session: "2025/2026",
-        fileType: "PDF",
-        uploaded: "Uploaded recently",
-        pdf: "../assets/pdfs/csc301-data-structures.pdf",
-        description:
-            "This resource contains academic materials for Data Structures and Algorithms. It is provided to help students study and prepare for their coursework."
-    },
+const resources = CAMPUSVAULT_RESOURCES;
 
-    "csc305-database": {
-        title: "Database Management Systems",
-        course: "CSC 305",
-        type: "Lecture Notes",
-        level: "300 Level",
-        session: "2025/2026",
-        fileType: "PDF",
-        uploaded: "Uploaded recently",
-        description:
-            "This resource contains academic materials for Database Management Systems. It is provided to help students study and prepare for their coursework."
-    },
-
-    "mth201-engineering-mathematics": {
-        title: "Engineering Mathematics II",
-        course: "MTH 201",
-        type: "Past Questions",
-        level: "200 Level",
-        session: "2024/2025",
-        fileType: "PDF",
-        uploaded: "Uploaded recently",
-        description:
-            "This resource contains past examination questions for Engineering Mathematics II. It can help students prepare for assessments and examinations."
-    },
-
-    "phy203-applied-physics": {
-        title: "Applied Physics",
-        course: "PHY 203",
-        type: "Past Questions",
-        level: "200 Level",
-        session: "2024/2025",
-        fileType: "PDF",
-        uploaded: "Uploaded recently",
-        description:
-            "This resource contains past examination questions for Applied Physics. It can help students prepare for assessments and examinations."
-    },
-
-    "intro-programming": {
-        title: "Introduction to Programming",
-        course: "CSC 201",
-        type: "Assignment",
-        level: "200 Level",
-        session: "2025/2026",
-        fileType: "PDF",
-        uploaded: "Uploaded recently",
-        description:
-            "This resource contains academic materials for Introduction to Programming. It is provided to support students with their coursework and assignments."
-    },
-
-    "csc307-computer-architecture": {
-        title: "Computer Architecture",
-        course: "CSC 307",
-        type: "Lecture Notes",
-        level: "300 Level",
-        session: "2025/2026",
-        fileType: "PDF",
-        uploaded: "Uploaded recently",
-        description:
-            "This resource contains academic materials for Computer Architecture. It is provided to help students study and prepare for their coursework."
-    }
-};
 
 /* =========================
    GET RESOURCE ID
