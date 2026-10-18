@@ -18,13 +18,6 @@
 
 <body>
 
-    <!--
-        PLACEHOLDER PAGE
-        Created during Phase 1 so navigation links never
-        point at a missing file. The real Past Questions
-        page still needs to be designed and built.
-    -->
-
     <header class="site-header">
 
         <div class="container header-inner">
@@ -96,41 +89,62 @@
 
         <section class="page-header">
             <div class="container">
-                <span class="section-badge">Placeholder</span>
+
+                <span class="section-badge">
+                    Exam Preparation
+                </span>
+
                 <h1>Past Questions</h1>
+
                 <p>
-                    This page has not been built yet.
+                    Review past examination questions to prepare
+                    for your assessments and examinations.
                 </p>
+
             </div>
         </section>
 
-        <section class="cta-section">
-            <div class="container cta-container">
-                <div class="cta-content">
+        <section class="resources-page-section">
+            <div class="container">
 
-                    <span class="section-label">
-                        PLACEHOLDER PAGE
+                <div class="resource-results-header">
+
+                    <div>
+                        <h2>Available Past Questions</h2>
+
+                        <p>
+                            Only materials already categorized as
+                            past questions are listed here.
+                        </p>
+                    </div>
+
+                    <span
+                        class="resource-count"
+                        id="past-question-count"
+                    >
+                        Resources
                     </span>
 
-                    <h2>Past Questions is coming soon.</h2>
-
-                    <p>
-                        The past questions archive has not been
-                        implemented yet. This page exists only so
-                        the navigation links keep working. Past
-                        question papers are already listed as a
-                        resource type you can filter for on the
-                        Resources page.
-                    </p>
-
-                    <a
-                        href="resources.html"
-                        class="btn btn-primary btn-large"
-                    >
-                        Browse Past Questions
-                    </a>
-
                 </div>
+
+                <p
+                    class="no-results-message"
+                    id="past-question-empty-message"
+                    hidden
+                >
+                    No past-question papers have been added yet.
+                    This archive is still small, and only real
+                    documents are shown, so nothing is listed until
+                    material becomes available. You can browse every
+                    available material on the
+                    <a href="resources.html">Resources page</a>.
+                </p>
+
+                <div
+                    class="resource-grid"
+                    id="past-question-grid"
+                ></div>
+
             </div>
         </section>
 
@@ -147,5 +161,7 @@
     </footer>
 
     <script src="../js/navigation.js"></script>
+    <script src="../js/resource-data.js"></script>
+    <script src="../js/past-questions-list.js"></script>
 </body>
 </html>

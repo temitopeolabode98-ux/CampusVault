@@ -18,13 +18,6 @@
 
 <body>
 
-    <!--
-        PLACEHOLDER PAGE
-        Created during Phase 1 so navigation links never
-        point at a missing file. The real Contact page
-        still needs to be designed and built.
-    -->
-
     <header class="site-header">
 
         <div class="container header-inner">
@@ -94,39 +87,182 @@
 
         <section class="page-header">
             <div class="container">
-                <span class="section-badge">Placeholder</span>
+
+                <span class="section-badge">
+                    Get in touch
+                </span>
+
                 <h1>Contact Us</h1>
+
                 <p>
-                    This page has not been built yet.
+                    Have feedback, a missing resource, or an idea to
+                    improve CampusVault? We would like to hear from
+                    you.
                 </p>
+
             </div>
         </section>
 
-        <section class="cta-section">
-            <div class="container cta-container">
-                <div class="cta-content">
+        <section class="contact-section">
+            <div class="container contact-container">
 
-                    <span class="section-label">
-                        PLACEHOLDER PAGE
-                    </span>
+                <div class="contact-form-card">
 
-                    <h2>The Contact page is coming soon.</h2>
+                    <h2>Send us a message</h2>
 
-                    <p>
-                        No contact form or contact details have
-                        been set up yet. This placeholder exists
-                        only so the navigation links keep
-                        working.
+                    <p
+                        class="contact-notice"
+                        role="note"
+                    >
+                        Please note: CampusVault has no backend
+                        server yet, so this form cannot deliver or
+                        save your message anywhere. The fields below
+                        check that your input is well formed, but
+                        nothing is sent after you press Send. Once a
+                        real submission system exists, this notice
+                        will be removed.
                     </p>
 
-                    <a
-                        href="../index.html"
-                        class="btn btn-primary btn-large"
-                    >
-                        Back to Home
-                    </a>
+                    <form id="contact-form" novalidate>
+
+                        <div class="contact-form-group">
+
+                            <label for="contact-name">
+                                Your name
+                                <span aria-hidden="true">*</span>
+                            </label>
+
+                            <input
+                                type="text"
+                                id="contact-name"
+                                name="name"
+                                autocomplete="name"
+                                required
+                                aria-required="true"
+                                aria-describedby="contact-name-error"
+                            >
+
+                            <p
+                                class="contact-field-error"
+                                id="contact-name-error"
+                            ></p>
+
+                        </div>
+
+                        <div class="contact-form-group">
+
+                            <label for="contact-email">
+                                Email address
+                                <span aria-hidden="true">*</span>
+                            </label>
+
+                            <input
+                                type="email"
+                                id="contact-email"
+                                name="email"
+                                autocomplete="email"
+                                required
+                                aria-required="true"
+                                aria-describedby="contact-email-error"
+                            >
+
+                            <p
+                                class="contact-field-error"
+                                id="contact-email-error"
+                            ></p>
+
+                        </div>
+
+                        <div class="contact-form-group">
+
+                            <label for="contact-subject">
+                                Subject
+                                <span aria-hidden="true">*</span>
+                            </label>
+
+                            <input
+                                type="text"
+                                id="contact-subject"
+                                name="subject"
+                                required
+                                aria-required="true"
+                                aria-describedby="contact-subject-error"
+                            >
+
+                            <p
+                                class="contact-field-error"
+                                id="contact-subject-error"
+                            ></p>
+
+                        </div>
+
+                        <div class="contact-form-group">
+
+                            <label for="contact-message">
+                                Message
+                                <span aria-hidden="true">*</span>
+                            </label>
+
+                            <textarea
+                                id="contact-message"
+                                name="message"
+                                rows="6"
+                                required
+                                aria-required="true"
+                                aria-describedby="contact-message-error"
+                            ></textarea>
+
+                            <p
+                                class="contact-field-error"
+                                id="contact-message-error"
+                            ></p>
+
+                        </div>
+
+                        <div class="contact-form-actions">
+
+                            <button
+                                type="submit"
+                                class="btn btn-primary"
+                            >
+                                Send message
+                            </button>
+
+                        </div>
+
+                        <p
+                            id="contact-status"
+                            class="contact-status"
+                            role="status"
+                            aria-live="polite"
+                        ></p>
+
+                    </form>
 
                 </div>
+
+                <aside class="contact-aside">
+
+                    <h2>Other ways to reach us</h2>
+
+                    <p>
+                        CampusVault does not publish an email
+                        address, phone number, or office location
+                        yet, because there is no team mailbox or
+                        support desk connected to this preview.
+                    </p>
+
+                    <p>
+                        If you are a student looking for materials in
+                        the meantime, everything currently available
+                        is listed on the
+                        <a href="resources.html">Resources page</a>,
+                        and you can browse by course on the
+                        <a href="courses.html">Courses page</a>.
+                    </p>
+
+                </aside>
+
             </div>
         </section>
 
@@ -143,5 +279,6 @@
     </footer>
 
     <script src="../js/navigation.js"></script>
+    <script src="../js/contact.js"></script>
 </body>
 </html>

@@ -18,13 +18,6 @@
 
 <body>
 
-    <!--
-        PLACEHOLDER PAGE
-        Created during Phase 1 so navigation links never
-        point at a missing file. The real Courses page
-        still needs to be designed and built.
-    -->
-
     <header class="site-header">
 
         <div class="container header-inner">
@@ -94,40 +87,65 @@
 
         <section class="page-header">
             <div class="container">
-                <span class="section-badge">Placeholder</span>
-                <h1>Courses</h1>
+
+                <span class="section-badge">
+                    Course Catalogue
+                </span>
+
+                <h1>Browse Courses</h1>
+
                 <p>
-                    This page has not been built yet.
+                    Explore the courses covered by the academic
+                    materials currently available on CampusVault.
                 </p>
+
             </div>
         </section>
 
-        <section class="cta-section">
-            <div class="container cta-container">
-                <div class="cta-content">
+        <section class="courses-page-section">
+            <div class="container">
 
-                    <span class="section-label">
-                        PLACEHOLDER PAGE
+                <div class="resource-results-header">
+
+                    <div>
+                        <h2>Available Courses</h2>
+
+                        <p>
+                            Each course lists how many real
+                            resources are available for it. Select a
+                            course to see its materials.
+                        </p>
+                    </div>
+
+                    <span
+                        class="resource-count"
+                        id="course-count"
+                    >
+                        Courses
                     </span>
 
-                    <h2>Courses is coming soon.</h2>
-
-                    <p>
-                        The course catalogue has not been
-                        implemented yet. This page exists only
-                        so the navigation links keep working.
-                        You can already browse every available
-                        material from the Resources page.
-                    </p>
-
-                    <a
-                        href="resources.html"
-                        class="btn btn-primary btn-large"
-                    >
-                        Browse Resources
-                    </a>
-
                 </div>
+
+                <p
+                    class="no-results-message"
+                    id="course-empty-message"
+                    hidden
+                >
+                    No courses are available yet. Resources appear
+                    on the
+                    <a href="resources.html">Resources page</a>
+                    as they are added.
+                </p>
+
+                <div class="course-grid" id="course-grid"></div>
+
+                <p class="course-note">
+                    <span id="course-resource-total"></span>
+                    are available across all courses. A course is
+                    only listed when it has at least one resource,
+                    so every link leads to real materials.
+                </p>
+
             </div>
         </section>
 
@@ -144,5 +162,7 @@
     </footer>
 
     <script src="../js/navigation.js"></script>
+    <script src="../js/resource-data.js"></script>
+    <script src="../js/course-list.js"></script>
 </body>
 </html>

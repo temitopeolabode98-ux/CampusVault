@@ -19,11 +19,13 @@
 <body>
 
     <!--
-        PLACEHOLDER PAGE
-        Created during Phase 1 so navigation links never
-        point at a missing file. There is no authentication
-        system yet, so this page deliberately offers no
-        registration form.
+        HONEST PREVIEW PAGE
+        CampusVault has no authentication system yet, so this page
+        deliberately offers no registration form. Registration does
+        not create a real account, and no password is ever
+        requested or stored. A real sign-up flow requires a properly
+        designed authentication backend, which is out of scope
+        until a separately approved phase.
     -->
 
     <header class="site-header">
@@ -47,7 +49,7 @@
                     Login
                 </a>
 
-                <a href="register.html" class="btn btn-primary btn-small">
+                <a href="register.html" class="btn btn-primary btn-small" aria-current="page">
                     Register
                 </a>
             </div>
@@ -86,7 +88,7 @@
             <a href="../resources.html">Resources</a>
             <a href="../past-questions.html">Past Questions</a>
             <a href="login.html">Login</a>
-            <a href="register.html">Register</a>
+            <a href="register.html" aria-current="page">Register</a>
         </nav>
 
     </header>
@@ -95,11 +97,18 @@
 
         <section class="page-header">
             <div class="container">
-                <span class="section-badge">Placeholder</span>
+
+                <span class="section-badge">
+                    Preview
+                </span>
+
                 <h1>Create an Account</h1>
+
                 <p>
-                    This page has not been built yet.
+                    Registration is not available on CampusVault
+                    yet.
                 </p>
+
             </div>
         </section>
 
@@ -108,26 +117,44 @@
                 <div class="cta-content">
 
                     <span class="section-label">
-                        PLACEHOLDER PAGE
+                        NOT IMPLEMENTED
                     </span>
 
-                    <h2>Registration is not available yet.</h2>
+                    <h2>Registering does not create a real account.</h2>
 
                     <p>
-                        CampusVault has no authentication system
-                        yet, so there is no registration form
-                        here. No form is shown because nothing
-                        would happen if you submitted one. This
-                        placeholder exists only so the
-                        navigation links keep working.
+                        CampusVault has no account system and no
+                        server, so a sign-up form is not shown. No
+                        account would be created if you submitted
+                        one, and no password is ever asked for or
+                        stored on this device.
                     </p>
 
-                    <a
-                        href="../resources.html"
-                        class="btn btn-primary btn-large"
-                    >
-                        Continue Browsing Resources
-                    </a>
+                    <p>
+                        Everything already available &mdash;
+                        browsing, searching, filtering, saving
+                        resources, and recently viewed items &mdash;
+                        works without an account, and your saved
+                        items stay in your own browser.
+                    </p>
+
+                    <div class="hero-actions">
+
+                        <a
+                            href="../resources.html"
+                            class="btn btn-primary btn-large"
+                        >
+                            Browse Resources
+                        </a>
+
+                        <a
+                            href="login.html"
+                            class="btn btn-secondary btn-large"
+                        >
+                            About logging in
+                        </a>
+
+                    </div>
 
                 </div>
             </div>
